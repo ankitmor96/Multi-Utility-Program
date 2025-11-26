@@ -1,20 +1,62 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    int basic_salary,gross_salary,HRA,DA,TA;
+int main() {
+   int score;
+   char grade;
 
-    printf("enter basic salary:");
-    scanf("%d" , &basic_salary);
-    HRA = 10 * basic_salary; 
-    DA = 5 * basic_salary;
-    TA = 8 * basic_salary;
+   printf("enter your score:");
+   scanf("%d",&score);
 
-    gross_salary =  basic_salary + HRA + DA + TA;
+   grade = (score >= 90)? 'A':
+           (score >=80)?  'B':
+            (score >=70)?  'c':
+            (score >=33)?  'd': 'F';
 
-    printf("gross salary = %.2d\n   ", gross_salary);
+    printf("your grade is %c\n",grade);
+    
+    
+    switch(grade){
 
+         case 'A':
+         printf("very very good !\n");
+         break;
+
+        case 'B':
+         printf("very good !\n");
+         break;
+
+        case 'C':
+         printf(" good !\n");
+         break;
+
+        case 'D':
+         printf("pass,but can improve !\n");
+         break;
+
+         default:
+         printf("sorry failed \n");
+
+
+    }
+
+       if(score >= 90)
+       printf("you are eligibale for the next levle \n");
+
+       else if(score >= 80)
+       printf("you are eligibale for the next levle \n");
+
+       else if(score >= 70)
+       printf("you are eligibale for the next levle \n");
+
+       else if(score >= 33)
+       printf("you are eligibale for the next levle \n");
+
+       else
+       printf("not eligibale ,try to next time\n");
+
+
+
+    
+    
     return 0;
-
-
-
 }
